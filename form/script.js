@@ -11,8 +11,8 @@ const type = document.querySelector('#type');
 
 const api = {
     async data(query, destination = false) {
-        try {
-            fetch(`${PATH}`, {
+         try {
+            await fetch(`${PATH}`, {
                 method: "POST",
                 mode: "cors",
                 headers: {
@@ -31,7 +31,9 @@ const api = {
                 if (!destination) getData(data);
                 if (destination) giveResult(data);
             })
-            .catch(error => console.error("error", error));
+            .catch(error => {
+                throw new Error(error);
+            });
         } catch {
             throw new Error('Request not sent');
         }
