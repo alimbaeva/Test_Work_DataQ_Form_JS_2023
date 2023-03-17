@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Дейта Кью - Алымбаева А.К</title>
+    <link rel="stylesheet" href="./style.css">
+</head>
+<body>
+    <div class="container">
+        <section class="search">
+            <p><strong>Компания или ИП</strong></p>
+            <label for="">
+                <input id="party" name="party" type="text" placeholder="Введите название, ИНН, ОГРН или адрес организации" /> 
+                <div class="popup"></div>
+            </label>
+        </section>
+          
+        <section class="result">
+            <h3>Результат</h3>
+          <p id="type"></p>
+          <div class="row">
+            <label>Краткое наименование</label>
+            <input id="name_short">
+          </div>
+          <div class="row">
+            <label>Полное наименование</label>
+            <input id="name_full">
+          </div>
+          <div class="row">
+            <label>ИНН / КПП</label>
+            <input id="inn_kpp">
+          </div>
+          <div class="row">
+            <label>Адрес</label>
+              <input id="address">
+          </div>
+        </section>
+    </div>
+
+      <script src="./script.js"></script>
+</body>
+</html>
